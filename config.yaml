@@ -1,0 +1,8 @@
+watch_folder: input
+organize_by: extension  # opções: extension, date, name
+destination_folder: organized
+extensions_map:
+  images: [".jpg", ".jpeg", ".png", ".gif"]
+  documents: [".pdf", ".docx", ".txt", ".xlsx"]
+  videos: [".mp4", ".avi", ".mov"]
+  others: []
