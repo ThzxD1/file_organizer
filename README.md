@@ -1,21 +1,30 @@
-# Organizador Automático de Arquivos
+# Automatic File Organizer
 
-Este projeto monitora uma pasta e organiza arquivos automaticamente por extensão, data ou nome, movendo-os para subpastas configuráveis. Ideal para automação do dia a dia, estudos de Python e portfólio.
+Watches a folder and automatically organizes files by extension, date, or name, moving them into configurable subfolders. Great for everyday automation, Python practice, and portfolio.
 
-## Como funciona
+## How it works
+- Watches the `input/` folder
+- Moves files into subfolders under `organized/` by extension, date, or name
+- Generates automatic logs of every move
 
-- Monitora a pasta `input/`
-- Move arquivos para subpastas em `organized/` conforme extensão, data ou nome
-- Gera logs automáticos das movimentações
+## Usage
+```bash
+git clone https://github.com/ThzxD1/file_organizer.git
+cd file_organizer
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python organizer.py
+```
 
-## Exemplo de Configuração (`config.yaml`)
-
+## Example Configuration (`config.yaml`)
 ```yaml
 watch_folder: input
-organize_by: extension
+organize_by: extension     # extension | date | name
 destination_folder: organized
 extensions_map:
   images: [".jpg", ".jpeg", ".png", ".gif"]
   documents: [".pdf", ".docx", ".txt", ".xlsx"]
   videos: [".mp4", ".avi", ".mov"]
   others: []
+```
